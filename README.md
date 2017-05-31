@@ -2,7 +2,8 @@
 
 # 1.查询进程运行运行 ps -eo pid,etime,cmd -H
 
-[zhoujl@itmtest1 json]$  ps -eo pid,etime,cmd -H |grep yanjsh
+[zhoujl@itmtest1 json]$  ps -eo pid,etime,cmd -H |grep yanjsh 
+
  7578       00:00           grep yanjsh
 17130  2-08:48:41   ./luax scheduler.lua --agent=j_agent_yanjsh --max=8
 13469    09:10:38     ./luax scheduler.lua --agent=j_agent_yanjsh --max=8
