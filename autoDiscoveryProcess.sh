@@ -52,9 +52,7 @@ age=$(checkProcessRunningSpecifyDays 1 9526)
 
 printf "that process has run for %s seconds\n" "$age"
 
-
-
-
+printf "success"
 
 
 
