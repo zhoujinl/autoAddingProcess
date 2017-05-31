@@ -1,7 +1,8 @@
-###½ø³Ì×Ô¶¯·¢ÏÖ
+### è¿›ç¨‹è‡ªåŠ¨å‘ç°
 
-1. ps -eo pid,etime,cmd -H
- [zhoujl@itmtest1 json]$  ps -eo pid,etime,cmd -H |grep yanjsh
+# 1.æŸ¥è¯¢è¿›ç¨‹è¿è¡Œè¿è¡Œ ps -eo pid,etime,cmd -H
+
+[zhoujl@itmtest1 json]$  ps -eo pid,etime,cmd -H |grep yanjsh
  7578       00:00           grep yanjsh
 17130  2-08:48:41   ./luax scheduler.lua --agent=j_agent_yanjsh --max=8
 13469    09:10:38     ./luax scheduler.lua --agent=j_agent_yanjsh --max=8
@@ -9,13 +10,13 @@
 15860    09:03:49     ./luax scheduler.lua --agent=j_agent_yanjsh --max=8
 13468    09:10:38   /usr/bin/java -Dprogram=j_agent_yanjsh -Dsun.lang.ClassLoader.allowArraySyntax=true -Duser.timezone=Asia/Shanghai -Xms256m -Xmx1024m com.ffcs.itm.agent.init.AgentStart
 
-²é³öÔËĞĞÊ±¼ä´óÓÚÒ»ÌìµÄ½ø³ÌID
-
-2.²¢ÇÒÓĞ¼àÌı¶Ë¿Ú
 
 
-3.»ñÈ¡ÏàÓ¦µÄ½øĞĞĞÅÏ¢
+# 2.å¹¶ä¸”æœ‰ç›‘å¬ç«¯å£
 
 
-4.°´ÕÕ¸ñÊ½Éú³ÉÅäÖÃÎÄ¼ş
+# 3.è·å–ç›¸åº”çš„è¿›è¡Œä¿¡æ¯
+
+
+# 4.æŒ‰ç…§æ ¼å¼ç”Ÿæˆé…ç½®æ–‡ä»¶
 
