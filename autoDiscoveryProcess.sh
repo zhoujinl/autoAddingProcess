@@ -3,10 +3,10 @@ g_allpidfile=".getChoiceProcessPid.txt";
 g_tempJslonfile=".tempJsonFile.txt";
 g_applicationProcsss="core.ApplicationProcess";
 g_oneDateSeconds=86400;
-g_processMessageJsonPre="{\"$g_applicationProcsss\":[";
+g_processMessageJsonPre="\"$g_applicationProcsss\":[";
 g_processMessageJsonSuff="],";
 g_processRelationJsonPre="\"RelationShip\": [";
-g_processRelationJsonSuff="]}";
+g_processRelationJsonSuff="]";
 
 # 前台传入
 g_keepRunningDates=36;
@@ -162,9 +162,10 @@ function getProcessRunningOverDays(){
 			vrelationbuild=${vrelationbuild}$y;
 		fi;
 	done;
-	vmessagebuild=${vmessagebuild}${g_processMessageJsonSuff}
+	vmessagebuild=${vmessagebuild}${g_processMessageJsonSuff};
 	vrelationbuild=${vrelationbuild}${g_processRelationJsonSuff};
-	echo ${vmessagebuild}${vrelationbuild} > $g_tempJslonfile
+	vresultJson="{"${vmessagebuild}${vrelationbuild}"}";
+	echo ${vresultJson} > $g_tempJslonfile
 }
 
 function getJsonFileName(){
