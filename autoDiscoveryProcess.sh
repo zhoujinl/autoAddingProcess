@@ -16,7 +16,8 @@ g_name=1000001011;
 g_sourclassname="core.Linux.Mainframe";
 g_user="logstash";
 g_processname="logstash";
-g_exclude="other"
+g_exclude="other";
+g_filepath="/home/zhoujl/opt/";
 
 
 #get all process
@@ -183,7 +184,7 @@ function getFinallyResult(){
 		exit -1;
 	fi
 	vjsonFileName=$(getJsonFileName);
-	cat ${g_tempJslonfile} > ${vjsonFileName} 
+	cat ${g_tempJslonfile} > ${g_filepath}${vjsonFileName} 
 }
 
 printf "=============================>> begin.\n"
