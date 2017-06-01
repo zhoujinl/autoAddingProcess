@@ -167,7 +167,14 @@ function getProcessRunningOverDays(){
 }
 
 function getJsonFileName(){
-	vfilename="CFG_$(g_neid)_7_$(g_agentid)";
+	vfilenamePre="CFG_"${g_neid}"_7_"${g_agentid}"_";
+	vnowdate=`date -d now +%Y%m%d%H%M%S`;
+	vmiddle="_000_FULL_";
+	vfilesize=`ls -al|grep $g_tempJslonfile |awk '{print $5}'`;
+	vfilenameSuff=".json"
+	
+	vresult=${vfilenamePre}${vnowdate}${vmiddle}${vfilesize}${vfilenameSuff};
+	echo $vresult;
 }
 function getFinallyResult(){
 
@@ -175,7 +182,8 @@ function getFinallyResult(){
 		echo "xxx"
 		exit -1;
 	fi
-		
+	vjsonFileName=$(getJsonFileName);
+	cat ${g_tempJslonfile} > ${vjsonFileName} 
 }
 
 printf "=============================>> begin.\n"
