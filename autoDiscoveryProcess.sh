@@ -190,6 +190,7 @@ function getFinallyResult(){
 	cat ${g_tempJslonfile} > ${g_filepath}${vjsonFileName} 
 }
 
+cd `dirname $0`
 printf "=============================>> begin.\n"
 ##1.查找所有的进程
 getChoiceProcess
