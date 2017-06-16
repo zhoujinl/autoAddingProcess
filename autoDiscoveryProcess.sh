@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # some final variables
 g_allpidfile=".getChoiceProcessPid.txt";
 g_tempJslonfile=".tempJsonFile.txt";
